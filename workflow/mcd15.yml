@@ -1,0 +1,20 @@
+$1:
+  Input:
+    NASAInput:
+      url: https://e4ftl01.cr.usgs.gov/MOTA/MCD15A3H.061/%{filename}
+      user: rkalyana
+      password:
+  Filter:
+    filename:
+      PathFilter:
+        pattern: '%{dtstring}/MCD15A3H.*.h09v07*.hdf'
+    dtstring:
+      DateTimeFilter:
+        pattern: '%Y.%m.%d'
+        start: 07/16/2002
+        exact_dates: True
+$2:
+  HDFEOSShapefileMask:
+    hdffile: $1
+    shapefile: /home/jovyan/CI4FAIR/files/watershed/subs1_projected_171936.shp
+    datasets: [Lai]

@@ -1,0 +1,27 @@
+# base image
+Stage0 += baseimage(image='ubuntu:18.04')
+
+# Python 3
+Stage0 += python(python3=True)
+
+# Install pip3
+Stage0 += packages(ospackages=['python3-pip','python3-setuptools','python3-wheel', 'wget', 'curl', 'openssh-client'])
+
+# Upgrade pip and setuptools
+Stage0 += shell(commands=['python3 -m pip install -U pip setuptools'])
+
+# Install framework
+Stage0 += pip(packages=['geoedfframework==0.6.0'],pip='pip3')
+
+# Update environment
+Stage1 += environment(variables={'PATH':'/usr/local/bin:$PATH','PYTHONPATH':'/usr/local/lib/python3.6/dist-packages:$PYTHONPATH'})
+
+# Copy files
+Stage1 += copy(src='.',dest='/shapefile2geojson')
+
+# Install this package
+Stage1 += shell(commands=['cd /shapefile2geojson', 'pip3 install .'])
+
+# Make scripts executable
+Stage1 += shell(commands=['chmod a+x /usr/local/bin/*.sh', 'chmod a+x /usr/local/bin/*.py', 'chmod -R go+rX /usr/local/lib/python3.6/dist-packages'])
+
