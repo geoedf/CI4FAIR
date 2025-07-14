@@ -1,7 +1,7 @@
 $1:
   Input:
     NASAInput:
-      url: https://e4ftl01.cr.usgs.gov/MOTA/MCD15A3H.061/2002.07.16/MCD15A3H.*.h09v07*.hdf
+      url: https://opendap.cr.usgs.gov/opendap/hyrax/DP131/MOTA/MCD15A3H.061/2002.07.16/MCD15A3H.*.h09v07*.hdf
       user: rkalyana
       password:
 $2:
