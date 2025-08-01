@@ -24,7 +24,7 @@ This tutorial is designed to be launched in a Jupyter notebook environment that 
 
 ## Usage
 
-[Launch tutorial notebook](https://jupyter.iguidedev.org/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgeoedf%2FCI4FAIR&urlpath=lab%2Ftree%2FCI4FAIR%2FGeoEDF_Tutorial_01.ipynb+&branch=main)
+[Launch tutorial notebook](https://149-165-151-111.js2proxy.cacao.run/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fgeoedf%2FCI4FAIR&urlpath=lab%2Ftree%2FCI4FAIR%2FGeoEDF_Tutorial_01.ipynb+&branch=main)
 
 ## Supplemental Information
 
